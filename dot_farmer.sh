@@ -30,4 +30,13 @@ done
 # Check output of git status
 
 git_status=`git status`
-echo $git_status
+git_commit_msg="Routine update of shell scripts"
+echo $?
+if [ -n "$(git status --porcelain)" ]
+then
+  git add .
+  git commit -am $git_commit_msg
+  git push -u origin master
+else
+  echo "No commit. No push. No change."
+fi
