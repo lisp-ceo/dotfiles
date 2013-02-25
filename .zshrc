@@ -67,7 +67,7 @@ DISABLE_AUTO_UPDATE="true"
  #### Custom ENV settings
 
  # Autoload screen if we aren't in it. http://stackoverflow.com/questions/171563/whats-in-your-zshrc 
- if [[ $STY = '' ]] then tmux attach; fi
+ #if [[ $STY = '' ]] then tmux attach; fi # More B/S on S/O. Doesn't work.
 
  # Vi bindings
  setopt VI
