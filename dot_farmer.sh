@@ -3,8 +3,6 @@
 # Collects dotfiles from your home directory, updates git repo and pushes it if 
 # its necessary
 
-# Create list of files
-
 string_of_files_to_track=".zshrc
 .vimrc
 .bashrc
@@ -30,12 +28,12 @@ done
 # Check output of git status
 
 git_status=`git status`
-git_commit_msg="Routine update of shell scripts"
+git_commit_msg="\"Routine update of shell scripts\""
 echo $?
 if [ -n "$(git status --porcelain)" ]
 then
   git add .
-  git commit -am $git_commit_msg
+  git commit -am "$git_commit_msg"
   git push -u origin master
 else
   echo "No commit. No push. No change."
