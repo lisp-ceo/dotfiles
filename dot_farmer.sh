@@ -9,7 +9,8 @@ string_of_files_to_track=".zshrc
 .gitconfig
 .bash_history
 .bash_logout
-.profile"
+.profile
+.jslintrc"
 
 array_of_files_to_track=($string_of_files_to_track)
 len_of_files_to_track=${#array_of_files_to_track[@]}
