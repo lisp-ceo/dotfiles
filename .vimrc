@@ -113,7 +113,7 @@ endif
 
 " Spell checking
 " Only spell check txt and md files
-set spell
+" set spell
 autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
 autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
 
