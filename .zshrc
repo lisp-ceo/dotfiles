@@ -162,3 +162,5 @@ DISABLE_AUTO_UPDATE="true"
 # Unbind caps lock on login
 setxkbmap -option ctrl:nocaps
 #xmodmap -e "remove lock = Caps_Lock"
+
+ alias grep="grep --color"
