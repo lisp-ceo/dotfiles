@@ -10,6 +10,8 @@
 " :he highlight-groups
 " :he cterm-colors
 " ref: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/171558#171558
+" Clear default highlighting
+hi clear
 
 " Enable highlighting of search terms
 set hlsearch
@@ -79,9 +81,11 @@ set more
 cmap w!! %!sudo tee > /dev/null %
 cmap a!! !sudo apachectl restart
 
+
 " Highlighting the current line and adjusting its color
-set cul
-hi CursorLine term=none cterm=none ctermbg=3
+"set cul
+" hi CursorLine
+"hi CursorLine term=none cterm=bold ctermbg=none ctermfg=none guibg=none
 
 " }}}
 
@@ -110,8 +114,11 @@ call pathogen#helptags()
 " }}}
 
 " Personal bindings
-" ctrl W carriage return
+" ctrl W - window options
+" t - new tab
+" e - invoke quickfix
 nnoremap <silent> <C-W>t :tabnew<CR> 
+nnoremap <silent> <C-W>e :cw<CR> 
 
 " Vim quickfix
 " :cw, :cn, :c
@@ -123,7 +130,6 @@ if has("autocmd")
   filetype plugin on
 endif
 
-filetype indent on
 " Spell checking
 " Only spell check txt and md files
 " set spell
@@ -131,7 +137,7 @@ autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
 autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
 
 " Highlight lines of text over 80 characters in width
-highlight OverLength ctermbg=red 
+highlight OverLength ctermbg=red cterm=bold
 "ctmerfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
@@ -151,7 +157,7 @@ hi Cursor	guibg=khaki guifg=slategrey
 "hi DiffChange
 "hi DiffDelete
 "hi DiffText
-"hi ErrorMsg
+" hi ErrorMsg
 hi VertSplit	guibg=#c2bfa5 guifg=grey50 gui=none
 hi Folded	guibg=grey30 guifg=gold
 hi FoldColumn	guibg=grey30 guifg=tan
@@ -190,7 +196,7 @@ hi Todo		guifg=orangered guibg=yellow2
 hi SpecialKey	ctermfg=darkgreen
 hi NonText	cterm=bold ctermfg=darkblue
 hi Directory	ctermfg=darkcyan
-hi ErrorMsg	cterm=bold
+hi ErrorMsg	cterm=bold ctermbg=darkblue
 hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
 hi Search	cterm=NONE ctermfg=grey ctermbg=blue
 hi MoreMsg	ctermfg=darkgreen
@@ -221,8 +227,8 @@ hi Type		ctermfg=2
 hi Underlined	cterm=underline ctermfg=darkcyan
 hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
-hi Error	ctermbg=darkcyan
-let g:JSLintHighlightErrorLine = 0
+hi Error	ctermfg=darkgrey
+" let g:JSLintHighlightErrorLine = 0
 
 "vim: sw=4
 
