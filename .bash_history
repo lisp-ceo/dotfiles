@@ -281,3 +281,86 @@ ls -al
 gconftool-2 -t string -s /desktop/gnome/background/picture_filename ~/Documents/wallpapers/git-cheat-sheet-medium.png 
 sudo gconftool-2 -t string -s /desktop/gnome/background/picture_filename ~/Documents/wallpapers/git-cheat-sheet-medium.png 
 -f ~/.zshrc
+ll
+cd /
+l
+ls -al
+cat .readahead 
+ll
+cd
+l
+ll
+cat der2
+cat derp2.txt 
+ll
+rm -rf derp*
+ll
+ls -al
+cd Downloads/
+ll
+l
+ll
+ls -al
+tmux
+sudo yum install tmux
+cd
+ll
+cd Code/
+ll
+cd fn_js/
+ll
+git status
+cd
+ll
+sudo su
+cd ~/Code/fn_js/
+gs
+git stauts
+git status
+git config --global user.name = "James Meldrum"
+git config --global user.email = "jrm.general@gmail.com"
+git config --global user.name = "fedora.laptop.jrm"
+git push
+ll
+cd ~/dotfiles/
+ll
+ls -al
+cp -d .* ~
+ls -al ~
+vi .
+vim .
+sudo yum install vim
+ll
+vi .
+vim .
+mkdir -p ~/.vim/autoload ~/.vim/bundle; curl -Sso ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+cd ~/.vim/
+ll
+vim .
+vi ~/.vim
+vim ~/.vim
+which vi
+which vim
+sudo mv /usr/bin/vi /usr/bin/vi_old
+sudo mv /usr/bin/bim /usr/bin/vi
+sudo mv /usr/bin/vim /usr/bin/vi
+vi .
+ll
+sudo yum install tmux
+tmux
+ll
+ls -al
+cd 
+ll
+ls -al
+ll
+cd dotfiles/
+ll
+sudo chmod u+x dot_farmer.sh 
+./dot_farmer.sh 
+ll
+mv ~/Downloads/tmux.conf ~/.tmux.conf
+tmux
+ll
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+zsh

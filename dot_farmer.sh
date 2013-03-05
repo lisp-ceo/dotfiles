@@ -4,6 +4,7 @@
 # its necessary
 
 string_of_files_to_track=".zshrc
+.tmux.conf
 .vimrc
 .bashrc
 .gitconfig
