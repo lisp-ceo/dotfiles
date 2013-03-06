@@ -364,3 +364,207 @@ tmux
 ll
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 zsh
+ssh root@ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ls -al ~/.ssh
+ls -al ~/Downloads/fedoralaptopjrm.pem 
+sudo chmod g-rw ~/Downloads/fedoralaptopjrm.pem 
+ls -al ~/Downloads/
+chmod o-r fedoralaptopjrm.pem 
+ssh root@ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ls -al ~/Downloads/
+ls -al ~/.ssh/
+chmod a+r ~/Downloads/fedoralaptopjrm.pem 
+ssh root@ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+chmod o-r ~/Downloads/fedoralaptopjrm.pem 
+ssh root@ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ls -al ~/Downloads/
+chmod g-r ~/Downloads/fedoralaptopjrm.pem 
+ssh root@ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ls -al ~/Downloads/
+ssh ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+[Assh ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+vi /home/jrm/.ssh/known_hosts 
+ssh ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh root@ec2-50-19-5-186.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh root@23.21.107.108 -i ~/Downloads/fedoralaptopjrm.pem 
+ll ~/Downloads/
+ssh root@23.21.107.108 -i ~/Downloads/fedoralaptopjrm.pem 
+ssh ec2-23-21-107-108.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh root@ec2-23-21-107-108.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh -vvv ec2-23-21-107-108.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh -v ec2-23-21-107-108.compute-1.amazonaws.com -i ~/Downloads/fedoralaptopjrm.pem 
+ssh -i ~/Downloads/fedoralaptopjrm.pem 23.21.107.108
+ssh -i ~/Downloads/fedoralaptopjrm.pem root@23.21.107.108
+ll
+cat .zshrc
+rm .zshrc
+ll
+cat .zshrc.pre-oh-my-zsh 
+mv .zshrc.pre-oh-my-zsh .zshrc
+ll
+vi dotfiles/dot_farmer.sh 
+vim dotfiles/dot_farmer.sh 
+ll
+which vim
+sudo yum install vim
+ll
+which vi
+sudo mv /usr/bin/vi /usr/bin/vim
+ll
+vi dotfiles/dot_farmer.sh 
+ll
+cd dotfiles/
+./dot_farmer.sh 
+ll
+ls -al
+cd
+ll
+cd Downloads/
+ll
+ls -al
+gedit ~/.ssh/id_rsa.pub 
+ll
+env
+zsh
+which zsh
+ll
+wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+ll
+tmux
+ssh -i ~/Downloads/fedoralaptopjrm.pem root@23.21.107.108
+ssh -i ~/Downloads/fedoralaptopjrm.pem root@23.21.107.108ll
+ssh -i ~/Downloads/fedoralaptopjrm.pem root@23.21.107.108
+ll
+ssh -i ~/Downloads/fedoralaptopjrm.pem root@ ec2-184-72-77-196.compute-1.amazonaws.com 
+ssh -i ~/Downloads/fedoralaptopjrm.pem root@ec2-184-72-77-196.compute-1.amazonaws.com 
+ssh 23.21.107.108
+ll
+ls -al
+ll
+tmuix
+tmux
+cd /var/www/www_futureequation_com/
+ll
+python manage.py runserver
+ll
+vi www_futureequation_com/settings.py
+python manage.py runserver
+vi www_futureequation_com/settings.
+vi www_futureequation_com/settings.py
+mkdr ../files
+mkdir ../files
+python manage.py runserver
+mkdir -p /var/www
+sudo mkdir -p /var/www
+ll
+vi /home/jrm/.ssh/config
+ll
+cd Downloads/
+ll
+cd ..
+ll
+cd /var/www/
+ll
+git clone git_aws:www_futureequation_com.git
+ll
+ls -al
+cd ..
+ll
+cd var
+ll
+sudo chown -R jrm:jrm www
+cd www
+ll
+git clone aws_git:www_futureequation_com.git
+ll
+cd www_futureequation_com/
+ll
+./todo.sh 
+pip install deps.txt 
+sudo yum search python-pip
+sudo su
+ll
+python manage.py runserver
+sudo su
+ll
+ssh root@ ec2-50-17-88-97.compute-1.amazonaws.com 
+ssh root@ec2-50-17-88-97.compute-1.amazonaws.com 
+sudo yum install dropbox
+psql
+updatedb 
+sudo updatedb 
+locate pgsql
+locate pg_hba
+locate .conf
+ll
+locate pgsql
+service psql start
+sudo service psql start
+sudo servicve postgres start
+sudo service postgres start
+sudo service postgresql start
+sudo service postgres start
+sudo service psql start
+/etc/ll
+cd /var/www/
+ll
+cd www_futureequation_com/
+ll
+sudo -u postgres createuser -P django_login
+cat /etc/passwd
+psql
+locate psql
+/usr/bin/psql
+ll
+sudo yum install postgres-devel
+locate postgres
+locate postgres | less
+sudo yum install postgres
+sudo yum install postgresql
+ll
+postgresql
+sudo su
+ll
+psql
+pg_config
+/usr/bin/psql 
+/usr/bin/psql start
+users
+cat /etc/passwd | grep -i "p"
+sudo su
+psql -U postgres
+vi ~/.zshrc
+vi /home/jrm/.bashrc 
+ll
+ls -al
+vi ~/.bash_profile
+ll
+env | grep -i shell
+sudo chsh -s /bin/zsh 
+man chsh
+chsh -l
+chsh -s /bin/zsh 
+l
+env
+env | grep -i shell
+/bin/zsh
+ssh aws_root
+tmux
+chsh -s /bin/zsh
+man chsh
+chsh -l
+sudo chsh -s /bin/zsh
+vi /etc/passwd
+vim /etc/passwd
+ll
+zsh
+gedit 
+pwd
+vi /home/jrm/.bash_profile 
+ll
+vi /home/jrm/.bash_profile 
+ll
+env | grep -i shell
+vi ~/.bashrc
+zsh

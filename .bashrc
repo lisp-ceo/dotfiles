@@ -27,10 +27,10 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
+## set variable identifying the chroot you work in (used in the prompt below)
+#if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+#    debian_chroot=$(cat /etc/debian_chroot)
+#fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -99,9 +99,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
-fi
+#if [ -f ~/.bash_profile ]; then
+#    . ~/.bash_profile
+#fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -109,5 +109,7 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+/bin/zsh
 
 setxkbmap -option ctrl:nocaps

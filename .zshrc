@@ -163,4 +163,4 @@ DISABLE_AUTO_UPDATE="true"
 setxkbmap -option ctrl:nocaps
 #xmodmap -e "remove lock = Caps_Lock"
 
- alias grep="grep --color"
+alias grep="grep --color"

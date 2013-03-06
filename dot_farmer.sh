@@ -3,6 +3,8 @@
 # Collects dotfiles from your home directory, updates git repo and pushes it if 
 # its necessary
 
+# TODO: Add .vim directory to SCM
+
 string_of_files_to_track=".zshrc
 .tmux.conf
 .vimrc
