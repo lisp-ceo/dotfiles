@@ -229,7 +229,7 @@ hi Underlined	cterm=underline ctermfg=darkcyan
 hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
 hi Error	ctermfg=darkgrey
-" let g:JSLintHighlightErrorLine = 0
+let g:JSLintHighlightErrorLine = 0
 
 "vim: sw=4
 
