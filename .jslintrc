@@ -1,4 +1,4 @@
 /*jslint browser: true, regexp: true, indent: 2, maxerr: 50, bitwise: true, devel: true, vars: true, white: true */
-/*global jQuery, $, define */
+/*global jQuery, $, define, require, Backbone */
 
 /* vim: set ft=javascript: */
