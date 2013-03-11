@@ -878,6 +878,7 @@ mozilla-filesystem
 mpfr
 mtdev
 mtools
+mutt
 mutter
 mythes
 nautilus
@@ -899,6 +900,7 @@ NetworkManager-openconnect
 NetworkManager-openvpn
 NetworkManager-pptp
 NetworkManager-vpnc
+newsbeuter
 newt
 newt-python
 nfs-utils
@@ -1280,6 +1282,7 @@ squashfs-tools
 sssd
 sssd-client
 startup-notification
+stfl
 stix-fonts
 stunnel
 sudo
@@ -1322,6 +1325,7 @@ tigervnc-server-minimal
 time
 tmpwatch
 tmux
+tokyocabinet
 totem
 totem-mozplugin
 totem-nautilus
@@ -1340,6 +1344,7 @@ udisks2
 unique3
 unzip
 upower
+urlview
 urw-fonts
 usb_modeswitch
 usb_modeswitch-data
