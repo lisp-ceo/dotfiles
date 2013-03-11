@@ -192,6 +192,7 @@ hi Special	guifg=navajowhite
 "hi Underlined
 hi Ignore	guifg=grey40
 hi Todo		guifg=orangered guibg=yellow2
+hi SpellBad cterm=bold ctermbg=darkblue
 
 " color terminal definitions
 hi SpecialKey	ctermfg=darkgreen
@@ -229,7 +230,7 @@ hi Underlined	cterm=underline ctermfg=darkcyan
 hi Ignore	cterm=bold ctermfg=7
 hi Ignore	ctermfg=darkgrey
 hi Error	ctermfg=darkgrey
-let g:JSLintHighlightErrorLine = 0
+" let g:JSLintHighlightErrorLine = 0
 
 "vim: sw=4
 
