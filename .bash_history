@@ -568,3 +568,76 @@ ll
 env | grep -i shell
 vi ~/.bashrc
 zsh
+ll
+dpkg -l
+which git
+sudo apt-get install git
+ifconfig
+iwconfig
+ifconfig 
+sudo apt-get install git
+ll
+mkdir ~/Code
+cd Code/
+git clone git@github.com:mshanken/managewine.git
+uname -a
+cat /etc/passwd
+ll
+vi /etc/sysctl.
+vi /etc/sysctl.conf 
+hostname
+vi /etc/hostname 
+hostname
+ssh-keygen -t rsa
+gedit ~/.ssh/id_rsa.pub 
+git clone git@github.com:mshanken/managewine.git
+ll
+git clone git@github.com:JamesMeldrum/dotfiles.git
+mv dotfiles/ ~/dotfiles
+ll
+cd ..
+l
+cat examples.desktop 
+l
+cd dotfiles/
+l
+ll
+vi dot_farmer.sh 
+cp -f .
+ls -f .
+ls -f .*
+ls -d .*
+ls -d .
+ls -df .*
+cp -df .* ~
+vi .
+gs
+cd ~/dotfiles/
+ll
+dpkg -l
+ll
+dpkg --set-selections < rpm.bak
+sudo dpkg --set-selections < rpm.bak
+sudo apt-get install zsh
+zsh
+ll
+vi .
+which vi
+vim .
+sudo apt-get install vim
+vim .
+ckennedy
+mkdir -p ~/.vim/autoload ~/.vim/bundle; curl -Sso ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+sudo apt-get install curl
+mkdir -p ~/.vim/autoload ~/.vim/bundle; curl -Sso ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+vim .
+sudo apt-get install tmux
+mkdir -p ~/.vim/autoload ~/.vim/bundle; curl -Sso ~/.vim/autoload/pathogen.vim     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+sudo chsh -s /bin/zsh
+l
+cd -
+ll
+env
+env | grep -i shell
+vi /etc/passwd

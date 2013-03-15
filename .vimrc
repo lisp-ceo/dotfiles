@@ -76,6 +76,9 @@ set ruler
 " Use more prompt
 set more
 
+" Treat underscore as word break
+set iskeyword-=_
+
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 cmap w!! %!sudo tee > /dev/null %
@@ -233,4 +236,7 @@ hi Error	ctermfg=darkgrey
 " let g:JSLintHighlightErrorLine = 0
 
 "vim: sw=4
+
+" Tips
+" Paste from the buffers, not the yank - "0p "10pem
 

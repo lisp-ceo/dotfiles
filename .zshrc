@@ -145,7 +145,7 @@ DISABLE_AUTO_UPDATE="true"
 
  #### Git
 
- alias gpp="git pull origin development; git push origin development;"
+#alias gpp="git pull origin development; git push origin development;" # TODO: Incorporate branch name as argument
  alias gco="git commit -am"
  alias gch="git checkout"
  alias gba="git branch -a"
@@ -154,13 +154,13 @@ DISABLE_AUTO_UPDATE="true"
 
  #### Vimpager
 
- export PAGER=~/.vim/bundle/vimpager/vimpager
- export CAT=~/.vim/bundle/vimpager/vimcat
+ export PAGER=/bin/vimpager
+ export CAT=/bin/vimcat
  alias less=$PAGER
  alias zless=$PAGER
 
 # Unbind caps lock on login
-setxkbmap -option ctrl:nocaps
+#setxkbmap -option ctrl:nocaps
 #xmodmap -e "remove lock = Caps_Lock"
 
 alias grep="grep --color"
