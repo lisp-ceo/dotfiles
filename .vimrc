@@ -39,14 +39,11 @@ set nocompatible
 set showcmd
 
 " Folding Stuffs
-" Evil thing this is. Still don't get it
-" set foldmethod=marker
 set foldmethod=syntax
+
 set foldlevelstart=1
-set foldnestmax=2
 
 let javaScript_fold=1             " JavaScript
-let sh_fold_enabled=1             " sh
 
 " vim-autoformat
 noremap <F7> :Autoformat<CR><CR>
@@ -73,7 +70,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Enable mouse support in console
-set mouse=a
+" set mouse=a
 
 " Got backspace?
 set backspace=2
