@@ -641,3 +641,5 @@ ll
 env
 env | grep -i shell
 vi /etc/passwd
+env | grep -i "shell"
+/bin/zsh

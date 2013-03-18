@@ -6,6 +6,7 @@
 # TODO: Add .vim directory to SCM
 
 string_of_files_to_track=".zshrc
+TODO.md
 .tmux.conf
 .vimrc
 .bashrc
