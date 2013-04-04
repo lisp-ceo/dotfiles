@@ -6,6 +6,10 @@
 export M2_HOME=/usr/local/apache-maven-3.0.4
 export M2=$M2_HOME/bin
 
+# mshanken aws
+export EC2_ACCESS_KEY=AKIAI7ESNYSD6SY257FA
+export EC2_SECRET_KEY=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
+
 # Custom PATH vars 
 
 ZSH=$HOME/.oh-my-zsh
@@ -151,6 +155,8 @@ DISABLE_AUTO_UPDATE="true"
  alias gba="git branch -a"
  alias gb="git branch"
  alias gs="git status"
+ alias gp="git pull"
+ alias gm="git merge"
 
  #### Vimpager
 
@@ -164,3 +170,11 @@ DISABLE_AUTO_UPDATE="true"
 #xmodmap -e "remove lock = Caps_Lock"
 
 alias grep="grep --color"
+bindkey '^R' history-incremental-search-backward
+
+#### ArgoUML
+# unpack to /usr/include/aroguml-0.34
+alias argouml="java -jar /usr/include/argouml-0.34/argouml.jar &"
+ 
+#### Jobs
+alias j="jobs"

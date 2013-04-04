@@ -47,6 +47,8 @@ let javaScript_fold=1             " JavaScript
 
 " vim-autoformat
 noremap <F7> :Autoformat<CR><CR>
+nnoremap <silent> ! zo<CR> 
+nnoremap <silent> # zc<CR> 
 
 " Needed for Syntax Highlighting and stuff
 filetype on
@@ -144,6 +146,7 @@ endif
 " set spell
 autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
 autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " Highlight lines of text over 80 characters in width
 highlight OverLength ctermbg=red cterm=bold
@@ -245,4 +248,3 @@ hi Error	ctermfg=darkgrey
 
 " Tips
 " Paste from the buffers, not the yank - "0p "10pem
-
