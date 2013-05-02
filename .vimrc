@@ -24,6 +24,8 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set textwidth=80
+" gqG - force format all text
 
 " Avoids issues with indenting multiple times
 
@@ -144,8 +146,8 @@ endif
 " Spell checking
 " Only spell check txt and md files
 " set spell
-autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
-autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
+" autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
+" autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " Highlight lines of text over 80 characters in width
