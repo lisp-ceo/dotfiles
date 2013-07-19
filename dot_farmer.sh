@@ -14,6 +14,7 @@ TODO.md
 .bash_history
 .bash_logout
 .profile
+.irssi
 .jslintrc"
 
 array_of_files_to_track=($string_of_files_to_track)
