@@ -312,3 +312,6 @@ endfunc
 " Bound to CtrlW + H
 map <C-m> :call MoveToNextTab()<CR><C-w>H
 map <C-n> :call MoveToPrevTab()<CR><C-w>H 
+" ctags
+map <F4> :TlistToggle<CR>
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>

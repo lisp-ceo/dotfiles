@@ -1,4 +1,18 @@
 /*jslint browser: true, regexp: true, indent: 2, maxerr: 50, bitwise: true, devel: true, vars: true, white: true, nomen: true */
-/*global jQuery, $, define, require, Backbone, FileReader, escape, grunt, module,FormData */
+/*global exports, jQuery, $, define, require, Backbone, FileReader, escape, grunt, module,FormData,phantom */
 
 /* vim: set ft=javascript: */
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "boss": true,
+  "eqnull": true,
+  "node": true
+}

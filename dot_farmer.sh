@@ -27,7 +27,7 @@ for arg in ${string_of_files_to_track[@]}; do
   then
     echo "derp"
   else 
-   cp ~/$arg ~/dotfiles/$arg
+   cp ~/$arg ~/Code/dotfiles/$arg
   fi
 done
 

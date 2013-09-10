@@ -18,6 +18,7 @@ PATH=$PATH:/opt/local/lib/rabbitmq/bin # Added rabbitMQ install from macports
 PATH=$PATH:/opt/local/lib/erlang/bin # Added Erlang install from macports
 PATH=$PATH:$M2/bin # Maven
 PATH=$PATH:/opt/local/bin # Macpots bin
+PATH=$PATH:/usr/lib/node_modules/jshint/bin # JSHint
 #PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin # Python 2.7
 
 # VirtualEnvWrapper 
@@ -69,9 +70,6 @@ DISABLE_AUTO_UPDATE="true"
  source $ZSH/oh-my-zsh.sh
 
  #### Custom ENV settings
-
- # Autoload screen if we aren't in it. http://stackoverflow.com/questions/171563/whats-in-your-zshrc 
- #if [[ $STY = '' ]] then tmux attach; fi # More B/S on S/O. Doesn't work.
 
  # Vi bindings
  setopt VI

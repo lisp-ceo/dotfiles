@@ -1,25 +1,22 @@
-__jrm master todo__
+_Today_
 
--------------------
+# Work
+  * ManageWine - implement Alison's feedback
+    - Cache more page versions - 50
+    - Save / Render regions correctly
+    - Add hints for the hotkeys
+    - Add a tab manager to check-in
+  * Finish LouRawls
+  * Finish Top 100
 
-## Today:
-  * Decide to be happy. Youre so grumpy. Its not healthy. 
-  * Put yourself out there and welcome new people into your life
-  * Amanda loves you and shes not going to see this toolbag anymore
+# Work out AH
+  * Legal paperwork
+  * Immigration
+  * Banking
 
-------------------
+# Skills
+  * Get better at DBs - ergh
 
-## MShanken
-  * Work on Top 100 app
-
-## Life
-  * Get internet
-  * Boot cold crescent back for fucks sake
-
-## Laserdick
-  * Work on the back end. Spin up a server to run an openGL tool
-
-## Sidies:
-  * Pomodoro web app
-  * UML.js
-  * JavaScript-based A/B testing demo - Thursday
+# O/S
+  * Finish LouRawls
+  * Put blog into github site

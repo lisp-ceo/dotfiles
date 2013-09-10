@@ -1,7 +1,3 @@
 [user]
-	name = James
+	name = James Meldrum
 	email = jrm.general@gmail.com
-[push]
-	default = matching
-[core]
-	excludesfile = /home/jrm/dotfiles/.gitignore
