@@ -7,6 +7,7 @@
 
 string_of_files_to_track=".zshrc
 Gruntfile.js
+.grunt-init
 TODO.md
 .tmux.conf
 .vimrc
