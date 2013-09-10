@@ -18,6 +18,7 @@ set hlsearch
 
 " Setting Tab size to 4
 " http://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
+" http://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier
 
 set smartindent
 set autoindent

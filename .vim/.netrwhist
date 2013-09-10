@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/jrm/Code/LouRawls/lib'
+let g:netrw_dirhist_2='/home/jrm/Code/LouRawls'
+let g:netrw_dirhist_3='/home/jrm/Code/LouRawls/bin'
+let g:netrw_dirhist_4='/home/jrm/Code/LouRawls/examples'
+let g:netrw_dirhist_5='/home/jrm/Code/.jqplugins'

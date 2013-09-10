@@ -1,5 +1,8 @@
 ### Default ENV settings
+# http://blog.goosoftware.co.uk/2012/05/22/ten-great-zsh-tips/
 # ref: http://stackoverflow.com/questions/171563/whats-in-your-zshrc
+# http://www.rayninfo.co.uk/tips/zshtips.html
+# http://chneukirchen.org/blog/archive/2008/02/10-zsh-tricks-you-may-not-know.html
 
 # Custom ENV vars
 

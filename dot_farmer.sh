@@ -15,6 +15,8 @@ TODO.md
 .bash_logout
 .profile
 .irssi
+.ctags
+.vim
 .jslintrc"
 
 array_of_files_to_track=($string_of_files_to_track)
@@ -27,7 +29,7 @@ for arg in ${string_of_files_to_track[@]}; do
   then
     echo "derp"
   else 
-   cp ~/$arg ~/Code/dotfiles/$arg
+   cp -R ~/$arg ~/Code/dotfiles/$arg
   fi
 done
 
