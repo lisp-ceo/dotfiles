@@ -19,6 +19,7 @@ TODO.md
 .irssi
 .ctags
 .vim
+.conf
 .jslintrc"
 
 array_of_files_to_track=($string_of_files_to_track)

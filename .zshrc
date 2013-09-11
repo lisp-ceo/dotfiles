@@ -26,18 +26,18 @@ PATH=$PATH:/usr/lib/node_modules/jshint/bin # JSHint
 
 # VirtualEnvWrapper 
 # http://jontourage.com/2011/02/09/virtualenv-pip-basics/
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-alias v='workon'
-alias v.deactivate='deactivate'
-alias v.mk='mkvirtualenv --no-site-packages'
-alias v.mk_withsitepackages='mkvirtualenv'
-alias v.rm='rmvirtualenv'
-alias v.switch='workon'
-alias v.add2virtualenv='add2virtualenv'
-alias v.cdsitepackages='cdsitepackages'
-alias v.cd='cdvirtualenv'
-alias v.lssitepackages='lssitepackages'
+#export WORKON_HOME=$HOME/.virtualenvs
+#source /usr/local/bin/virtualenvwrapper.sh
+#alias v='workon'
+#alias v.deactivate='deactivate'
+#alias v.mk='mkvirtualenv --no-site-packages'
+#alias v.mk_withsitepackages='mkvirtualenv'
+#alias v.rm='rmvirtualenv'
+#alias v.switch='workon'
+#alias v.add2virtualenv='add2virtualenv'
+#alias v.cdsitepackages='cdsitepackages'
+#alias v.cd='cdvirtualenv'
+#alias v.lssitepackages='lssitepackages'
 
 
 # Set name of the theme to load.
@@ -183,3 +183,6 @@ alias argouml="java -jar /usr/include/argouml-0.34/argouml.jar &"
 alias j="jobs"
 
 unset TMUX
+
+#### Got to be a better way to open a file
+alias v="vi"
