@@ -108,15 +108,14 @@ chatnets = {
 
 channels = (
     { name = "#nylug"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#erlang"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#node.js"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#vim"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#couchdb"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#schemaverse"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#puppet"; chatnet = "Freenode"; autojoin = "yes"; },
+    { name = "#javascript"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#documentcloud"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#eff"; chatnet = "Freenode"; autojoin = "yes"; }
-    { name = "#kanso"; chatnet = "Freenode"; autojoin = "yes"; }
+    { name = "#eff"; chatnet = "Freenode"; autojoin = "yes"; },
+    { name = "#kanso"; chatnet = "Freenode"; autojoin = "yes"; },
+    { name = "#duckduckgo"; chatnet = "Freenode"; autojoin = "yes"; },
+    { name = "#grunt"; chatnet = "Freenode"; autojoin = "yes"; },
+    { name = "#jekyll"; chatnet = "Freenode"; autojoin = "yes"; }
     );
 
 aliases = {

@@ -11,8 +11,9 @@
   "noarg": true,
   "sub": true,
   "undef": true,
-  "unused": true,
+  "unused": false,
   "boss": true,
   "eqnull": true,
-  "node": true
+  "node": true,
+  "esnext": true
 }

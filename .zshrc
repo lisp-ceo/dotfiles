@@ -126,7 +126,7 @@ DISABLE_AUTO_UPDATE="true"
 
  #### Aliases
 
- alias l="ls -Al"
+ alias l="ls -al"
  alias f="find ."
 
  ##### Apache
