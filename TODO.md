@@ -23,6 +23,8 @@ _Today_
     - Add hints for the hotkeys
     - Add a tab manager to check-in
 
+  * Read http://embed.ly/docs/tutorials/gif
+
 # Work out AH
   * Legal paperwork
   * Immigration
@@ -32,5 +34,12 @@ _Today_
   * Get better at DBs - ergh
 
 # O/S
-  * Finish LouRawls
+  x Finish LouRawls
   * Put blog into github site
+  * NOM - Node Object Manager. NPM-type utility for instantiating Objects over
+    the wire.
+  * NodeJS fitbit - http://dev.fitbit.com/
+  * Blog post on 'idiomatic' javascript
+    - Undefined as initializers for JS objects, rest strings
+  * npm install client and library framework
+  * Install better JSON syntax highlighting

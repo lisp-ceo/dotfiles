@@ -316,3 +316,7 @@ map <C-n> :call MoveToPrevTab()<CR><C-w>H
 " ctags
 map <F4> :TlistToggle<CR>
 map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" Stop it with the fucking swap files in my dir -
+" http://stackoverflow.com/questions/743150/how-to-prevent-vim-from-creating-and-leaving-temporary-files
+set backupdir=~/Code/tmp
+set dir=~/Code/tmp

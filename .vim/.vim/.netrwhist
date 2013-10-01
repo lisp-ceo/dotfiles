@@ -1,2 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/jrm/Code/managewine/frontend/js/app'
+let g:netrw_dirhist_2='/home/jrm/Code/managewine/frontend/js/app/views'
+let g:netrw_dirhist_3='/home/jrm/Code/managewine/frontend/js/app'
+let g:netrw_dirhist_4='/home/jrm/Code/ChappySinclair/lib'
+let g:netrw_dirhist_5='/home/jrm/Code/s3-managerClient/_scripts/css'
+let g:netrw_dirhist_6='/home/jrm/Code/s3-managerClient'
