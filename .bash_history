@@ -82,3 +82,5 @@ ll ~
 vi .zshrc 
 sudo shutdown -r now
 l
+su
+sudo su

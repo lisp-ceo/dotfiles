@@ -110,12 +110,10 @@ channels = (
     { name = "#nylug"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#node.js"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#javascript"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#documentcloud"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#eff"; chatnet = "Freenode"; autojoin = "yes"; },
-    { name = "#kanso"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#duckduckgo"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#grunt"; chatnet = "Freenode"; autojoin = "yes"; },
     { name = "#jekyll"; chatnet = "Freenode"; autojoin = "yes"; }
+    { name = "#echodouchebag"; chatnet = "Freenode"; autojoin = "yes"; }
     );
 
 aliases = {

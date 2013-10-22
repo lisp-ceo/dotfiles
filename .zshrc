@@ -5,10 +5,6 @@
 # http://chneukirchen.org/blog/archive/2008/02/10-zsh-tricks-you-may-not-know.html
 
 # Custom ENV vars
-
-export M2_HOME=/usr/local/apache-maven-3.0.4
-export M2=$M2_HOME/bin
-
 # mshanken aws
 export EC2_ACCESS_KEY=AKIAI7ESNYSD6SY257FA
 export EC2_SECRET_KEY=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
@@ -23,6 +19,11 @@ PATH=$PATH:$M2/bin # Maven
 PATH=$PATH:/opt/local/bin # Macpots bin
 PATH=$PATH:/usr/lib/node_modules/jshint/bin # JSHint
 #PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin # Python 2.7
+
+# Maven
+export JAVA_HOME=/usr/lib/jvm/default-java
+export M2_HOME=/usr/share/maven
+export M2=$M2_HOME/bin
 
 # VirtualEnvWrapper 
 # http://jontourage.com/2011/02/09/virtualenv-pip-basics/
