@@ -12,40 +12,13 @@ export EC2_SECRET_KEY=3MrkhQBw2CzNW8YtgGS7Ujh3AljWpS3DinYGuKR+
 # Custom PATH vars 
 
 ZSH=$HOME/.oh-my-zsh
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:/opt/local/lib/rabbitmq/bin # Added rabbitMQ install from macports
-PATH=$PATH:/opt/local/lib/erlang/bin # Added Erlang install from macports
-PATH=$PATH:$M2/bin # Maven
-PATH=$PATH:/opt/local/bin # Macpots bin
-PATH=$PATH:/usr/lib/node_modules/jshint/bin # JSHint
-#PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin # Python 2.7
-
-# Maven
-export JAVA_HOME=/usr/lib/jvm/default-java
-export M2_HOME=/usr/share/maven
-export M2=$M2_HOME/bin
-
-# VirtualEnvWrapper 
-# http://jontourage.com/2011/02/09/virtualenv-pip-basics/
-#export WORKON_HOME=$HOME/.virtualenvs
-#source /usr/local/bin/virtualenvwrapper.sh
-#alias v='workon'
-#alias v.deactivate='deactivate'
-#alias v.mk='mkvirtualenv --no-site-packages'
-#alias v.mk_withsitepackages='mkvirtualenv'
-#alias v.rm='rmvirtualenv'
-#alias v.switch='workon'
-#alias v.add2virtualenv='add2virtualenv'
-#alias v.cdsitepackages='cdsitepackages'
-#alias v.cd='cdvirtualenv'
-#alias v.lssitepackages='lssitepackages'
-
+PATH="$HOME/.rbenv/bin:$PATH"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="candy"
+ZSH_THEME="htmldrum"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -61,7 +34,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
  COMPLETION_WAITING_DOTS="true"
@@ -69,7 +42,8 @@ DISABLE_AUTO_UPDATE="true"
  # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
  # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
  # Example format: plugins=(rails git textmate ruby lighthouse)
- plugins=(git composer python svn nyan vi-mode)
+ # plugins=(git vi-mode tmux tmuxinator vagrant)
+ plugins=(git vi-mode )
 
  source $ZSH/oh-my-zsh.sh
 
@@ -120,37 +94,6 @@ DISABLE_AUTO_UPDATE="true"
  setopt HIST_EXPIRE_DUPS_FIRST
  setopt HIST_FIND_NO_DUPS
 
- #### Env
-
- alias mycnf="vi /etc/my.cnf"
- alias phpini="vi /opt/local/etc/php5/php.ini"
-
- #### Aliases
-
- alias l="ls -al"
- alias f="find ."
-
- ##### Apache
-
- alias tail_apacheLog="tail -Fn 50 /opt/local/apache2/logs/error_log";
- alias tail_phpLog="tail -Fn 50 /opt/local/apache2/logs/php_errors.log";
- alias ee_hash='php /var/www/sites/exhibit-e/ee_sites/project_files/hashPassword.php'
- alias a_restart='sudo /opt/local/apache2/bin/httpd -k restart'
- alias a_start='sudo /opt/local/apache2/bin/httpd -k start'
- alias m_start='mysqld start &&'
- alias phpini="vim /etc/php.ini"
-
- #### MySQL
-
- alias mysql_lcl="mysql -h 127.0.0.1 -u root -proot"
- alias mysql_dev="mysql -h db.exhibit-e.dev -u root -pAvH5QmENJBuK"
- alias mysql_qa="mysql -h db.exhibit-e.qa -u root -pc9ytxX9nqbRK"
- alias mysql_stg="mysql -h db.exhibit-e.stg -u root -pvQ7fky7DGE8t0"
- alias mysql_prod="mysql -h db.exhibit-e.prod -u root -pfWznwXFeVe2N7bWX"
- alias mysql_gm="mysql -h10.168.173.103  -u root -p5Ty562ZG"
-
- #### Git
-
 #alias gpp="git pull origin development; git push origin development;" # TODO: Incorporate branch name as argument
  alias gco="git commit -am"
  alias gch="git checkout"
@@ -164,11 +107,6 @@ DISABLE_AUTO_UPDATE="true"
 
  #### Vimpager
 
- export PAGER=/bin/vimpager
- export CAT=/bin/vimcat
- alias less=$PAGER
- alias zless=$PAGER
-
 # Unbind caps lock on login
 #setxkbmap -option ctrl:nocaps
 #xmodmap -e "remove lock = Caps_Lock"
@@ -178,7 +116,7 @@ bindkey '^R' history-incremental-search-backward
 
 #### ArgoUML
 # unpack to /usr/include/aroguml-0.34
-alias argouml="java -jar /usr/include/argouml-0.34/argouml.jar &"
+# alias argouml="java -jar /usr/include/argouml-0.34/argouml.jar &"
  
 #### Jobs
 alias j="jobs"
@@ -186,4 +124,32 @@ alias j="jobs"
 unset TMUX
 
 #### Got to be a better way to open a file
-alias v="vi"
+alias v="vim"
+
+# Run on new shell
+have_fortune=`which fortune`
+if [ -e have_fortune ]; then
+    echo ""
+    fortune
+    echo ""
+fi
+
+setopt appendhistory autocd nomatch autopushd pushdignoredups promptsubst
+unsetopt beep
+autoload -U promptinit
+promptinit
+
+#### rbenv
+eval "$(rbenv init -)"
+
+# Colored man pages
+man() {
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
+}

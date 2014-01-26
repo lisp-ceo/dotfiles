@@ -11,10 +11,22 @@
 " :he cterm-colors
 " ref: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/171558#171558
 " Clear default highlighting
-hi clear
+" hi clear
 
 " Enable highlighting of search terms
 set hlsearch
+
+" Pathogen
+execute pathogen#infect()
+
+" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Setting Tab size to 4
 " http://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
@@ -44,12 +56,7 @@ set showcmd
 " Folding Stuffs
 set foldmethod=syntax
 
-set foldlevelstart=1
-
-let javaScript_fold=1             " JavaScript
-
 " vim-autoformat
-noremap <F7> :Autoformat<CR><CR>
 nnoremap <silent> ! zo<CR> 
 nnoremap <silent> # zc<CR> 
 
@@ -93,7 +100,6 @@ set iskeyword-=_
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 " http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work
 cmap w!! %!sudo tee > /dev/null %
-cmap a!! !sudo apachectl restart
 
 
 " Highlighting the current line and adjusting its color
@@ -101,30 +107,6 @@ cmap a!! !sudo apachectl restart
 " hi CursorLine
 "hi CursorLine term=none cterm=bold ctermbg=none ctermfg=none guibg=none
 
-" }}}
-
-"{{{Look and Feel
-"
-"" Favorite Color Scheme
-if has("gui_running")
-  colorscheme inkpot
-  " Remove Toolbar
-  set guioptions-=T
-  "Terminus is AWESOME
-  set guifont=Terminus\ 9
-else
-  " colorscheme metacosm
-endif
-
-" Status line gnarliness
-" look into this status line
-set laststatus=2
-set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
-" }}}
-
-" {{{ Pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
 " }}}
 
 " Personal bindings
@@ -139,115 +121,8 @@ nnoremap <silent> <C-W>e :cw<CR>
 " rebind caps lock
 
 if has("autocmd")
-  filetype on
   filetype indent on
-  filetype plugin on
 endif
-
-" Spell checking
-" Only spell check txt and md files
-" set spell
-" autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_au
-" autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_au
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-
-" Highlight lines of text over 80 characters in width
-highlight OverLength ctermbg=red cterm=bold
-"ctmerfg=white guibg=#592929
-match OverLength /\%81v.\+/
-
-" Limit to 80 chars per line
-" set columns=80
-
-
-" TODO: Abstract this into its own color scheme.
-hi clear
-
-hi Normal	guifg=White guibg=grey20
-
-" highlight groups
-hi Cursor	guibg=khaki guifg=slategrey
-"hi CursorIM
-"hi Directory
-"hi DiffAdd
-"hi DiffChange
-"hi DiffDelete
-"hi DiffText
-" hi ErrorMsg
-hi VertSplit	guibg=#c2bfa5 guifg=grey50 gui=none
-hi Folded	guibg=grey30 guifg=gold
-hi FoldColumn	guibg=grey30 guifg=tan
-hi IncSearch	guifg=slategrey guibg=khaki
-"hi LineNr
-hi ModeMsg	guifg=goldenrod
-hi MoreMsg	guifg=SeaGreen
-hi NonText	guifg=LightBlue guibg=grey30
-hi Question	guifg=springgreen
-hi Search	guibg=peru guifg=wheat
-hi SpecialKey	guifg=yellowgreen
-hi StatusLine	guibg=#c2bfa5 guifg=black gui=none
-hi StatusLineNC	guibg=#c2bfa5 guifg=grey50 gui=none
-hi Title	guifg=indianred
-hi Visual	gui=none guifg=khaki guibg=olivedrab
-"hi VisualNOS
-hi WarningMsg	guifg=salmon
-"hi WildMenu
-"hi Menu
-"hi Scrollbar
-"hi Tooltip
-
-" syntax highlighting groups
-hi Comment	guifg=SkyBlue
-hi Constant	guifg=#ffa0a0
-hi Identifier	guifg=palegreen
-hi Statement	guifg=khaki
-hi PreProc	guifg=indianred
-hi Type		guifg=darkkhaki
-hi Special	guifg=navajowhite
-"hi Underlined
-hi Ignore	guifg=grey40
-hi Todo		guifg=orangered guibg=yellow2
-hi SpellBad cterm=bold ctermbg=darkblue
-
-" color terminal definitions
-hi SpecialKey	ctermfg=darkgreen
-hi NonText	cterm=bold ctermfg=darkblue
-hi Directory	ctermfg=darkcyan
-hi ErrorMsg	cterm=bold ctermbg=darkblue
-hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
-hi Search	cterm=NONE ctermfg=grey ctermbg=blue
-hi MoreMsg	ctermfg=darkgreen
-hi ModeMsg	cterm=NONE ctermfg=brown
-hi LineNr	ctermfg=3
-hi Question	ctermfg=green
-hi StatusLine	cterm=bold,reverse
-hi StatusLineNC cterm=reverse
-hi VertSplit	cterm=reverse
-hi Title	ctermfg=5
-hi Visual	cterm=reverse
-hi VisualNOS	cterm=bold,underline
-hi WarningMsg	ctermfg=darkcyan
-hi WildMenu	ctermfg=0 ctermbg=3
-hi Folded	ctermfg=darkgrey ctermbg=NONE
-hi FoldColumn	ctermfg=darkgrey ctermbg=NONE
-hi DiffAdd	ctermbg=4
-hi DiffChange	ctermbg=5
-hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
-hi DiffText	cterm=bold
-hi Comment	ctermfg=darkcyan
-hi Constant	ctermfg=brown
-hi Special	ctermfg=5
-hi Identifier	ctermfg=6
-hi Statement	ctermfg=3
-hi PreProc	ctermfg=5
-hi Type		ctermfg=2
-hi Underlined	cterm=underline ctermfg=darkcyan
-hi Ignore	cterm=bold ctermfg=7
-hi Ignore	ctermfg=darkgrey
-hi Error	ctermfg=darkgrey
-" let g:JSLintHighlightErrorLine = 0
-
-"vim: sw=4
 
 " Tips
 " Paste from the buffers, not the yank - "0p "10pem
@@ -257,14 +132,6 @@ autocmd vimenter * if !argc() | NERDTreeToggle | endif
 noremap <F2> :NERDTreeToggle<CR><CR>
 nnoremap <silent> ! zo<CR> 
 nnoremap <silent> # zc<CR> 
-
-" Syntastic
-
-" YouCompleteMe
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" Bundle 'Valloric/YouCompleteMe'
-
 
 function MoveToPrevTab()
   "there is only one window
@@ -313,10 +180,49 @@ endfunc
 " Bound to CtrlW + H
 map <C-m> :call MoveToNextTab()<CR><C-w>H
 map <C-n> :call MoveToPrevTab()<CR><C-w>H 
-" ctags
-map <F4> :TlistToggle<CR>
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-" Stop it with the fucking swap files in my dir -
 " http://stackoverflow.com/questions/743150/how-to-prevent-vim-from-creating-and-leaving-temporary-files
 set backupdir=~/Code/tmp
 set dir=~/Code/tmp
+
+" Color themes
+set background=dark
+highlight clear
+if exists("syntax on")
+  syntax reset
+endif
+let g:colors_name="htmldrum"
+hi Normal guifg=#969696 guibg=#000000
+hi Comment guifg=#a2a6b0 guibg=NONE
+hi Constant guifg=#0b4a1a guibg=NONE
+hi String guifg=#ed9463 guibg=NONE
+hi htmlTagName guifg=#e07e7e guibg=NONE
+hi Identifier guifg=#179c65 guibg=NONE
+hi Statement guifg=#fff200 guibg=NONE
+hi PreProc guifg=#d9d9d9 guibg=NONE
+hi Type guifg=#73ad15 guibg=NONE
+hi Function guifg=#0ffa69 guibg=NONE
+hi Repeat guifg=#e07590 guibg=NONE
+hi Operator guifg=#c2de76 guibg=NONE
+hi Error guibg=#ff0000 guifg=#ffffff
+hi TODO guibg=#0011ff guifg=#ffffff
+hi link character constant
+hi link number  constant
+hi link boolean constant
+hi link Float   Number
+hi link Conditional Repeat
+hi link Label   Statement
+hi link Keyword Statement
+hi link Exception Statement
+hi link Include PreProc
+hi link Define  PreProc
+hi link Macro   PreProc
+hi link PreCondit PreProc
+hi link StorageClass  Type
+hi link Structure Type
+hi link Typedef Type
+hi link htmlTag Special
+hi link Tag   Special
+hi link SpecialChar Special
+hi link Delimiter Special
+hi link SpecialComment Special
+hi link Debug   Special
