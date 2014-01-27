@@ -7,8 +7,6 @@
 
 " cool help screens
 " :he group-name
-" :he highlight-groups
-" :he cterm-colors
 " ref: http://stackoverflow.com/questions/164847/what-is-in-your-vimrc/171558#171558
 " Clear default highlighting
 " hi clear
@@ -64,6 +62,7 @@ nnoremap <silent> # zc<CR>
 filetype on
 filetype plugin on
 syntax enable
+syntax on
 set grepprg=grep\ -nH\ $*
 
 " Spaces are better than a tab character
@@ -186,12 +185,12 @@ set dir=~/Code/tmp
 
 " Color themes
 set background=dark
-highlight clear
 if exists("syntax on")
   syntax reset
 endif
 let g:colors_name="htmldrum"
 hi Normal guifg=#969696 guibg=#000000
+hi HighLight guifg=#969696 guibg=#000000
 hi Comment guifg=#a2a6b0 guibg=NONE
 hi Constant guifg=#0b4a1a guibg=NONE
 hi String guifg=#ed9463 guibg=NONE
@@ -226,3 +225,5 @@ hi link SpecialChar Special
 hi link Delimiter Special
 hi link SpecialComment Special
 hi link Debug   Special
+hi visual term=NONE ctermfg=0 ctermbg=11
+hi ErrorMsg term=NONE ctermfg=0 ctermbg=4
