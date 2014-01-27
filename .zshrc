@@ -42,8 +42,7 @@ DISABLE_AUTO_TITLE="true"
  # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
  # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
  # Example format: plugins=(rails git textmate ruby lighthouse)
- # plugins=(git vi-mode tmux tmuxinator vagrant)
- plugins=(git vi-mode )
+ plugins=(git vi-mode history-substring-search)
 
  source $ZSH/oh-my-zsh.sh
 
@@ -94,8 +93,19 @@ DISABLE_AUTO_TITLE="true"
  setopt HIST_EXPIRE_DUPS_FIRST
  setopt HIST_FIND_NO_DUPS
 
+# TODO: Redo alias as functions
+# http://stackoverflow.com/questions/7131670/make-bash-alias-that-takes-parameter
 #alias gpp="git pull origin development; git push origin development;" # TODO: Incorporate branch name as argument
- alias gco="git commit -am"
+ #alias gco="git commit -am"
+
+ # Use defaults to push to 
+ function gitAddCommitPushMaster(){
+   ga;
+   git commit -am $1;
+   git push origin master;
+ }
+
+ alias gco=gitAddCommitPushMaster
  alias gch="git checkout"
  alias gba="git branch -a"
  alias gb="git branch"
@@ -103,7 +113,17 @@ DISABLE_AUTO_TITLE="true"
  alias gpul="git pull"
  alias gpus="git push"
  alias gm="git merge"
- alias ga="git add"
+ alias ga="git add .;git add -u ."
+
+ ## CD
+ 
+ function CD_AND_UPDATE(){
+   cd $1;
+   printf "\033c" #http://stackoverflow.com/questions/5367068/clear-the-ubuntu-bash-screen-for-real
+   l
+ }
+alias cd=CD_AND_UPDATE
+ 
 
  #### Vimpager
 
@@ -153,3 +173,9 @@ man() {
     LESS_TERMCAP_us=$'\E[04;38;5;146m' \
     man "$@"
 }
+# If not running interactively, do not do anything
+[[ $TERM != "screen" ]] && exec tmux
+set t_Co=256
+
+# TODO:
+# http://fendrich.se/blog/2012/09/28/no/
