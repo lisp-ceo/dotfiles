@@ -23,8 +23,21 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
+" Add Bundles here before formatting
+" http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 Bundle 'gmarik/vundle'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/syntastic'
+Bundle 'snipMate'
+Bundle 'snipMate-snippets'
+
+" This does what it says on the tin. It will check your file on open too, not just on save.
+" You might not want this, so just leave it out if you don't.
+let g:syntastic_check_on_open=1
 
 " Setting Tab size to 4
 " http://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
@@ -189,7 +202,7 @@ if exists("syntax on")
   syntax reset
 endif
 let g:colors_name="htmldrum"
-hi Normal guifg=#969696 guibg=#000000
+hi Normal ctermfg=6 ctermbg=0
 hi HighLight guifg=#969696 guibg=#000000
 hi Comment guifg=#a2a6b0 guibg=NONE
 hi Constant guifg=#0b4a1a guibg=NONE
@@ -226,4 +239,21 @@ hi link Delimiter Special
 hi link SpecialComment Special
 hi link Debug   Special
 hi visual term=NONE ctermfg=0 ctermbg=11
-hi ErrorMsg term=NONE ctermfg=0 ctermbg=4
+hi ErrorMsg term=underline
+hi LineNr term=NONE ctermfg=6 guifg=0
+hi link javaScriptSpecial Constant
+hi javaScriptFuncArg term=underline ctermfg=3
+
+hi link javaScriptParen Error
+hi link javaScriptParenError Error
+hi link javaScriptBracket Error
+hi link javaScriptDotNotation Error
+hi link javaScriptBlock Error
+
+hi javaScriptIdentifier ctermfg=15
+hi javaScriptString ctermfg=6 ctermbg=0
+
+" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>

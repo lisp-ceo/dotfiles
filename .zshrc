@@ -117,13 +117,12 @@ DISABLE_AUTO_TITLE="true"
 
  ## CD
  
- function CD_AND_UPDATE(){
-   cd $1;
-   printf "\033c" #http://stackoverflow.com/questions/5367068/clear-the-ubuntu-bash-screen-for-real
-   l
- }
-alias cd=CD_AND_UPDATE
- 
+function CD_AND_UPDATE(){
+  cd $1;
+  printf "\033c" #http://stackoverflow.com/questions/5367068/clear-the-ubuntu-bash-screen-for-real
+  l
+}
+alias cdd=CD_AND_UPDATE
 
  #### Vimpager
 
@@ -147,11 +146,9 @@ unset TMUX
 alias v="vim"
 
 # Run on new shell
-have_fortune=`which fortune`
+#have_fortune=`which fortune`
 if [ -e have_fortune ]; then
-    echo ""
     fortune
-    echo ""
 fi
 
 setopt appendhistory autocd nomatch autopushd pushdignoredups promptsubst
@@ -161,6 +158,11 @@ promptinit
 
 #### rbenv
 eval "$(rbenv init -)"
+
+### NVM
+source ~/.nvm/nvm.sh
+### bash completion for NVM
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 # Colored man pages
 man() {
