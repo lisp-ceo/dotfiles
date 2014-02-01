@@ -1,0 +1,36 @@
+## GETTING AROUND
+alias cdd=CD_AND_UPDATE
+# alias ~='cd ~'
+# alias /='cd /'
+if [ -d $HOME/Code ]
+  then
+    alias %="cd $HOME/Code; ls -al;"
+fi
+alias grep="grep --color=always"
+alias j="jobs"
+alias v="vim"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias l='ls -lah'
+alias la='ls -AF'
+alias ll='ls -lFh'
+
+## GIT
+alias gcom=gitAddCommitPushMaster
+alias gco=git commit -m $1
+alias gch="git checkout"
+alias gba="git branch -a"
+alias gb="git branch"
+alias gs="git status"
+alias gpul="git pull"
+alias gpus="git push"
+alias gm="git merge"
+alias ga="git add .;git add -u ."
+alias gr="git remote -v;"
+
+#### ArgoUML
+# unpack to /usr/include/aroguml-0.34
+# alias argouml="java -jar /usr/include/argouml-0.34/argouml.jar &"
+
+# alias newruby="git init .;rbenv local $RUBY_DEFAULT;rbenv rehash;rbenv shell $RUBY_DEFAULT;rbenv rehash;bundle init;rbenv rehash;vi Gemfile;"
