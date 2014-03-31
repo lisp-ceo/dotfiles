@@ -1,0 +1,44 @@
+#!/bin/bash
+##
+## Script to update the environment variables
+## for development on localhost
+## grep all instances of localhost to IP address when showing on network
+## :%s/localhost/10\.0\.4\.17/g
+## @TODO: this is ugly. refactor.
+
+export MW_ENV="dev";
+export APP_NAME="ManageWine";
+export APP_PORT="80";
+export APP_DIR=/app
+export APP_VERSION="0.6.3"
+  export APP_VERSION_RELEASE_DATE="`date -I`"
+export APP_PROXY_PORT="80";
+export APP_HOSTNAME="localhost";
+export APP_API_HOSTNAME="http://localhost/" 
+export API_HOSTNAME='54.83.29.34';
+#export API_HOSTNAME='dchan.nightly-android.newdev.mshanken.com';
+export BE_DB_FILEPATH="database";
+export BE_DB_FILENAME="managewine.db" 
+export BE_REDIS_PORT="6379"
+
+export FE_BASE_URL_PATH="http://localhost/"
+
+export NODE_BIN=/usr/local/bin/node
+export SCRIPT_FILE="/app/start.js" # Entry point for the nodejs app
+export LOG_FILE=/var/log/managewine.log
+export RUN_AS="root" # Upstart can only be run nicely as root, need to drop privileges
+
+export DEBUG_MASTER=true;
+export DEBUG_THREADS=true;
+
+# Winelist
+export MSHANKEN_INVENTORY_WINELIST_ID="2a8e78d2-e7e4-11e2-b1f8-005056900008";
+export MSHANKEN_UNASSIGNED_WINELIST_ID="18b25f84-e7e4-11e2-a0b7-005056900008";
+
+# Application Meta-data
+export LEAD_DEVELOPER_NAME="James Meldrum"
+export LEAD_DEVELOPER_EMAIL="jmeldrum@mshanken.com"
+
+## DEPRECATED - TODO: Remove deprecated global vars from application
+## Assigned is the set difference of unassigned bottlings and inventory - unecessary
+export MSHANKEN_ASSIGNED_WINELIST_ID="b0b6d47e-f89f-11e2-9041-005056900008";

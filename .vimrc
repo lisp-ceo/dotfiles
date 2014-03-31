@@ -1,9 +1,9 @@
 " Vim color file
 " Maintainer:  James Meldrum <jrm.general@gmail.com>
-" Last Change:  $Date: 2004/06/13 19:30:30 $
-" Last Change:  $Date: 2004/06/13 19:30:30 $
+" Last Change:  $Date: 2004/06/13 19:30:30
+" Last Change:  $Date: 2004/06/13 19:30:30
 " URL:    http://jamesmeldrum.github.com
-" Version:  $Id: .vimrc,v 1.1 2004/06/13 19:30:30 vimboss Exp $
+" Version:  $Id: .vimrc,v 1.1 2004/06/13 19:30
 
 " cool help screens
 " :he group-name
@@ -17,8 +17,12 @@ set hlsearch
 " Pathogen
 execute pathogen#infect()
 
+" Tab Completion
+au FileType javascript set dictionary+=$HOME/.vim/bundle/vim-node-dict/dict/node.dict
+
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/node/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -27,13 +31,15 @@ call vundle#rc()
 " http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 Bundle 'gmarik/vundle'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
+Bundle 'Node.vim'
+Bundle 'ruby.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/syntastic'
-Bundle 'snipMate'
-Bundle 'snipMate-snippets'
+Bundle 'The-NERD-tree'
+Bundle 'The-NERD-Commenter'
+Bundle 'bash-support.vim'
+Bundle 'chef.vim'
+Bundle 'format.vim'
 
 " This does what it says on the tin. It will check your file on open too, not just on save.
 " You might not want this, so just leave it out if you don't.
@@ -65,7 +71,7 @@ set nocompatible
 set showcmd
 
 " Folding Stuffs
-set foldmethod=syntax
+"set foldmethod=syntax
 
 " vim-autoformat
 nnoremap <silent> ! zo<CR> 
@@ -202,6 +208,7 @@ if exists("syntax on")
   syntax reset
 endif
 let g:colors_name="htmldrum"
+let g:vim_json_syntax_conceal = 0
 hi Normal ctermfg=6 ctermbg=0
 hi HighLight guifg=#969696 guibg=#000000
 hi Comment guifg=#a2a6b0 guibg=NONE
@@ -216,7 +223,9 @@ hi Function guifg=#0ffa69 guibg=NONE
 hi Repeat guifg=#e07590 guibg=NONE
 hi Operator guifg=#c2de76 guibg=NONE
 hi Error guibg=#ff0000 guifg=#ffffff
-hi TODO guibg=#0011ff guifg=#ffffff
+hi Visual ctermbg=1 ctermfg=0
+hi TODO ctermbg=1 ctermfg=2
+
 hi link character constant
 hi link number  constant
 hi link boolean constant
@@ -238,22 +247,51 @@ hi link SpecialChar Special
 hi link Delimiter Special
 hi link SpecialComment Special
 hi link Debug   Special
-hi visual term=NONE ctermfg=0 ctermbg=11
 hi ErrorMsg term=underline
 hi LineNr term=NONE ctermfg=6 guifg=0
 hi link javaScriptSpecial Constant
 hi javaScriptFuncArg term=underline ctermfg=3
 
-hi link javaScriptParen Error
-hi link javaScriptParenError Error
-hi link javaScriptBracket Error
-hi link javaScriptDotNotation Error
-hi link javaScriptBlock Error
+"hi link javaScriptParen Error
+"hi link javaScriptParenError Error
+"hi link javaScriptBracket Error
+"hi link javaScriptDotNotation Error
+"hi link javaScriptBlock Error
 
-hi javaScriptIdentifier ctermfg=15
-hi javaScriptString ctermfg=6 ctermbg=0
+hi javaScriptIdentifier ctermfg=3
+hi javaScriptString ctermfg=6 ctermbg=0 term=NONE
+hi javaScriptFuncKeyword ctermfg=4 term=underline 
+hi javaScriptStringS ctermfg=7 
+hi javaScriptFunction ctermfg=4 term=underline 
+hi javaScriptFuncName ctermfg=4 ctermbg=0
+hi link javaScriptParens javaScriptFuncName
+hi link javaScriptBraces javaScriptFuncName
+hi link javaScriptOpSymbols javaScriptFuncName
+hi link javaScriptNumber Boolean
+
+hi link rubyLocalVariableOrMethod javaScriptIdentifier
+hi link rubyInclude javaScriptIdentifier
+" Symbols are bold, string are normal
+hi rubyString ctermfg=5
+
+hi link htmlEndTag htmlTag
+hi link htmlEndTag htmlTag
 
 " http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
 map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" Vim
+" If the current buffer has never been saved, it will have no name,
+" call the file browser to save it, otherwise just save it.
+command -nargs=0 -bar QuitAll if &modified 
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <silent> <C-S> :<C-u>Update<CR>
+nnoremap <silent> <C-Q> :qa!<CR>
+set paste

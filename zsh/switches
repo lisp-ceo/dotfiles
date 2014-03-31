@@ -1,0 +1,25 @@
+setopt VI # Vi bindings
+setopt EXTENDED_GLOB # Dunno but more GLOB is good
+HISTFILE=~/.history
+SAVEHIST=10000 # approx a year's history 
+HISTSIZE=10000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY # Write after each command
+setopt SHARE_HISTORY # Killer: share history between multiple shells
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE # If a line starts with a space, don't save it.
+setopt HIST_NO_STORE
+setopt HIST_VERIFY # When using a hist thing, make a newline show the change before executing it.
+setopt EXTENDED_HISTORY # Save the time and how long a command ran
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+unset TMUX
+bindkey '^R' history-incremental-search-backward
+setopt appendhistory autocd nomatch autopushd pushdignoredups promptsubst
+unsetopt beep
+# autoload -U promptinit
+# promptinit
