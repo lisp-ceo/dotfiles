@@ -1,0 +1,39 @@
+# Replace keys in config with path
+export AWS_CONFIG_FILE=$HOME/.aws/config
+#export AWS_DEFAULT_PROFILE='mshanken'
+export EDITOR=vim
+#export EDITOR=/usr/bin/vim
+ZSH=$HOME/.oh-my-zsh
+PATH="$HOME/.rbenv/bin:$PATH"
+PATH="$PATH:/usr/local/packer"
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND" # After each command, save and reload history
+# avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups
+
+## Git
+export GIT_EDITOR=vim
+export GIT_AUTHOR_NAME="James Meldrum"
+export GIT_AUTHOR_EMAIL="james@htmldrum.com"
+
+## Node.JS
+export NODE_ENV=development
+
+## RBENV
+export HTMLDRUM_RBENV='TRUE'
+export RUBY_DEFAULT="2.0.0-p353"
+## NVM
+export HTMLDRUM_NVM='TRUE'
+## MSHANKEN
+export MSHANKEN_DIR="/home/htmldrum/Code/mshanken"
+
+## TMUX
+set t_Co=256
+
+export ENV="development"
+
+## Applications
+[[ -f "$HOME/.zsh/managewine.sh" ]] && . "$HOME/.zsh/managewine.sh"
+
+## S3
+export AWS_ACCESS_KEY_ID=AKIAI7ESNYSD6SY257FA
+export AWS_SECRET_ACCESS_KEY=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

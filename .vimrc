@@ -269,6 +269,11 @@ hi link javaScriptBraces javaScriptFuncName
 hi link javaScriptOpSymbols javaScriptFuncName
 hi link javaScriptNumber Boolean
 
+" JSON
+
+hi link jsonNoQuotes String
+hi link jsonStringSQ String
+
 hi link rubyLocalVariableOrMethod javaScriptIdentifier
 hi link rubyInclude javaScriptIdentifier
 " Symbols are bold, string are normal
@@ -295,3 +300,11 @@ command -nargs=0 -bar QuitAll if &modified
 nnoremap <silent> <C-S> :<C-u>Update<CR>
 nnoremap <silent> <C-Q> :qa!<CR>
 set paste
+
+" Ignores for ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ 'site' : '.*\_site\.*'
+  \ }

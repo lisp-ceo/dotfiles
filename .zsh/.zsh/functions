@@ -1,0 +1,67 @@
+## GETTING AROUND
+function CD_AND_UPDATE(){
+  cd $1;
+  printf "\033c" #http://stackoverflow.com/questions/5367068/clear-the-ubuntu-bash-screen-for-real
+  l
+}
+
+## GIT
+function gitAddCommitPushMaster(){
+  git commit -am $1;
+  git push origin master;
+}
+
+function kitty(){
+  echo '
+                      .............                .""".             .""".    
+              ..."""""             """""...       $   . ".         ." .   $    
+          ..""        .   .   .   .   .    ..    $   $$$. ". ... ." .$$$   $    
+        ."    . " . " . " . " . " . " . " .  "" ."  $$$"""  "   "  """$$$  ".   
+      ."      . " . " . " . " . " . " . " .     $  "                    "   $   
+     ."   . " . " . "           "   " . " . "  ."      ...          ...     ".  
+    ."    . " . "    .."""""""""...     " . "  $     .$"              "$.    $  
+   ."     . " . " .""     .   .    ""..   . " $ ".      .""$     .""$      ." $ 
+  ."    " . " .       . " . " . " .    $    " $ "      "  $$    "  $$       " $ 
+  $     " . " . " . " . " . " . " . "   $     $             $$.$$             $ 
+  $     " . " . " . " . " . " . " . " .  $  " $  " .        $$$$$        . "  $ 
+  $     " . " . " . " . " . " . " . " .  $    $      "  ..   "$"   ..  "      $ 
+  ".    " . " . " . " . " . " . " . "   ."  "  $  . . . $  . .". .  $ . . .  $  
+   $    " . " . " . " . " . " . " . "  ."   "            ".."   ".."       
+    $     . " . " . " . " . " . "   .."   . " . "..    "             "    .."   
+    ".      " . " . " . " . " .  .""    " . " .    """$...         ...$"""      
+     ". "..     " . " . " . " .  "........  "    .....  ."""....."""            
+       ". ."$".....                       $..."$"$"."   $".$"... `":....        
+         "".."    $"$"$"$"""$........$"$"$"  ."."."  ...""      ."".    `"".    
+             """.$.$." ."  ."."."    ."."." $.$.$"""".......  ". ". $ ". ". $   
+                    """.$.$.$.$.....$.$.""""               ""..$..$."..$..$."
+  ';
+}
+
+# Colored man pages
+man() {
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
+
+}
+
+# http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
+# zsh
+alias vim="stty stop '' -ixoff ; vim"
+# `Frozing' tty, so after any command terminal settings will be restored
+ttyctl -f
+
+# bash
+# No ttyctl, so we need to save and then restore terminal settings
+vim()
+{
+    local STTYOPTS="$(stty --save)"
+    stty stop '' -ixoff
+    command vim "$@"
+    stty "$STTYOPTS"
+}
