@@ -30,10 +30,3 @@ export MSHANKEN_DIR="/home/htmldrum/Code/mshanken"
 set t_Co=256
 
 export ENV="development"
-
-## Applications
-[[ -f "$HOME/.zsh/managewine.sh" ]] && . "$HOME/.zsh/managewine.sh"
-
-## S3
-export AWS_ACCESS_KEY_ID=AKIAI7ESNYSD6SY257FA
-export AWS_SECRET_ACCESS_KEY=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
